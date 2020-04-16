@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,12 +24,14 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Find my Parking</a>
       </li>
-     
-    </ul>
+         </ul>
     
   </div>
   
   <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+  <br>
+  <button style="width:auto;" href="signin.html">Sign in</button>
+  
 
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -41,7 +43,7 @@
           <div class="col-lg-10 col-xl-9 mx-auto">
             <div class="card card-signin flex-row my-5">
               <div class="card-img-left d-none d-md-flex">
-                 <!-- Background image for card set in CSS! -->
+
               </div>
               <div class="card-body">
                 <h5 class="card-title text-center">Register</h5>
@@ -86,6 +88,7 @@
   </form>
 </div>
 
+
 </nav>
 
 </head>
@@ -120,19 +123,25 @@
 <body>
 
     <div class="content">
-        <div class="Pick your Parking spot">
-            <img class="d-block w-30" src="Parking6.jpg" height="200px" class="float-left" />
+        <div id="Pick-your-Parking-spot" class="Pick-your-Parking-spot">
+            <img src="Parking6.jpg" class="float-left" />
             <h4>Pick your Parking spot</h4>
             <p>
-                The web is
+              Pick your parking spot and book it.
+              Compare Rates
+              Get Amazing discounts
+              Book on the web or with our free App
             </p>
-        </div>
-        <div id="Enjoy hassle-free parking" class="Enjoy hassle-free parking">
-            <img class="d-block w-30" src="using phone.jpg" height="200px" class="float-right" />
+        </h2>
+        <div id="Enjoy-hassle-free-parking" class="Enjoy-hassle-free-parking">
+            <img src="using phone.jpg" class="float-right" />
             <h4>Enjoy hassle-free parking.</h4>
             <p>
-                The web is
-            </p>
+              Enjoy hassle-free parking.
+              Booking and payment of parking space with just one click
+              Simply park your car and go
+              Enjoy a premium parking experience
+              ParkNow: Space to do more.</p>
         </div>
 
   
@@ -142,10 +151,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 <div class="footer">
-  <h2>Made with</h2>
-  <p>
-      &copy; 2020 Park Me!.
-  </p>
+  <h5>
+    Made with &copy; 2020 Park Me!.
+  </h5>
 </div>
 </body>
 

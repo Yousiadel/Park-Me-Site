@@ -1,16 +1,27 @@
-var modal = document.getElementById('id01');
+$("#login").on("click", function(){
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-var modal = document.getElementById('id02');
+  var username=$("#user").val()
+  var password=$("#password").val()
+  localStorage.setItem("username", username)
+  localStorage.setItem("password", password)
+  console.log(username);
+  console.log(password);
+})
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+
+$("#register").on("click", function(){
+  
+  var username=$("#inputUserame").val()
+  var email=$("#inputEmail").val()
+  var password=$("#inputPassword").val()
+  var confirmpassword=$("#inputConfirmPassword").val()
+  localStorage.setItem("username", username)
+  localStorage.setItem("email", email)
+  localStorage.setItem("password", password)
+  localStorage.setItem("confirmpassword", confirmpassword)
+  console.log(username);
+  console.log(email);
+  console.log(password);
+  console.log(confirmpassword);
+})
+

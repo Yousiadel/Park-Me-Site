@@ -24,11 +24,11 @@
          </ul>
     
   </div>
-  <!--Sign up-->
+  
   <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>  
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content">
+  <form class="modal-content" action="/action_page.php">
     <div class="container">
       <h1>Sign Up</h1>
       <div class="container">
@@ -62,8 +62,23 @@
                     <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
                     <label for="inputConfirmPassword">Confirm password</label>
                   </div>
+
+                  <div class="form-label-group">
+                    <input type="LicensePlateNumber" id="inputPlateNumber" class="form-control" placeholder="LicensePlateNumber" required>
+                    <label for="inputPlateNumber">License Plate Number</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="CarMake" id="inputMake" class="form-control" placeholder="CarMake" required>
+                    <label for="inputMake">Car Make</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="CarColor" id="inputColor" class="form-control" placeholder="CarColor" required>
+                    <label for="inputColor">Car Color</label>
+                  </div>
     
-                  <button id="register" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" formaction="index.html">Register</button>
+                  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
                  
                 </form>
               </div>
@@ -74,7 +89,7 @@
       <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        
+        <button type="submit" class="signupbtn">Sign Up</button>
       </div>
     </div>
   </form>
@@ -86,28 +101,29 @@
 
 <div id="id02" class="modal">
   
-  <form class="modal-content animate" method="post">
+  <form class="modal-content animate" action="/action_page.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="profile img.png" height="100px" alt="Avatar" class="avatar">
     </div>
-    <!--Login part-->
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input id="user" type="text" placeholder="Enter Username" name="uname" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+    
+
+    <div class="container">
+      <label for="loginuname"><b>Username</b></label>
+      <input type="text" id="loginuname" placeholder="Enter Username" name="loginuname" required>
+
+      <label for="loginpsw"><b>Password</b></label>
+      <input type="password" id="loginpsw" placeholder="Enter Password" name="loginpsw" required>
         
-      <button id="login" type="submit">Login</button>
+      <button type="submit">Login</button>
       <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me</label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <span class="loginpsw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
 </div>
@@ -150,21 +166,18 @@
             <img src="Parking6.jpg" class="float-left" />
             <h4>Pick your Parking spot</h4>
             <p>
-              Pick your parking spot and book it.
-              Compare Rates
-              Get Amazing discounts
-              Book on the web or with our free App
+              Parking Finder site is to help you to change your attention from the significances of 
+              finding parking to getting on with experiencing the best of the rest of your day.
             </p>
         </h2>
         <div id="Enjoy-hassle-free-parking" class="Enjoy-hassle-free-parking">
             <img src="using phone.jpg" class="float-right" />
             <h4>Enjoy hassle-free parking.</h4>
-            <p>
-              Enjoy hassle-free parking.
-              Booking and payment of parking space with just one click
-              Simply park your car and go
-              Enjoy a premium parking experience
-              ParkNow: Space to do more.</p>
+            <p>With the Parking Finder site, 
+              you will find available parking spots that are ideally located. 
+              The Parking Finder site gives you a perfect overview of parking spots close to your destination. 
+              Parking Finder not only saves you time but allows you to plan every trip with ease and confidence.
+              </p>
         </div>
 
   
@@ -172,7 +185,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script src="script.js"></script>
+
 <div class="footer">
   <h5>
     Made by &copy; 2020 Park Me!.

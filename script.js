@@ -1,7 +1,15 @@
-$("#login").on("click", function(){
+var modal = document.getElementById('id01');
+$("#login").on("click", function () {
 
-  var username=$("#user").val()
-  var password=$("#password").val()
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  var modal = document.getElementById('id02');
+  var username = $("#user").val()
+  var password = $("#password").val()
   localStorage.setItem("username", username)
   localStorage.setItem("password", password)
   console.log(username);
@@ -9,28 +17,34 @@ $("#login").on("click", function(){
 })
 
 
-$("#register").on("click", function(){
-  
-  var username=$("#inputUserame").val()
-  var email=$("#inputEmail").val()
-  var password=$("#inputPassword").val()
-  var confirmpassword=$("#inputConfirmPassword").val()
-  var inputPlateNumber=$("#inputPlateNumber").val()
-  var inputMake=$("#inputMake").val()
-  var inputColor=$("#inputColor").val()
+$("#register").on("click", function () {
+
+  var username = $("#inputUserame").val()
+  var email = $("#inputEmail").val()
+  var password = $("#inputPassword").val()
+  var confirmpassword = $("#inputConfirmPassword").val()
+  var LicensePlateNumber = $("#inputLicensePlateNumber")
+  var carmake = $("#CarMake")
+  var carcolor = $("#CarColor")
   localStorage.setItem("username", username)
   localStorage.setItem("email", email)
   localStorage.setItem("password", password)
   localStorage.setItem("confirmpassword", confirmpassword)
-  localStorage.setItem("inputPlateNumber",inputPlateNumber)
-  localStorage.setItem("inputMake",inputMake)
-  localStorage.setItem("inputColor",inputColor)
+  localStorage.setItem("licenseplatenumber",licenseplatenumber)
+  localStorage.setItem("carmake",carmake)
+  localStorage.setItem("carcolor",carcolor)
   console.log(username);
   console.log(email);
   console.log(password);
   console.log(confirmpassword);
-  console.log(inputPlateNumber);
-  console.log(inputMake);
-  console.log(inputColor);
+  console.log(licenseplatenumber);
+  console.log(carmake);
+  console.log(carcolor);
 })
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
